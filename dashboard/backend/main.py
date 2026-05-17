@@ -18,6 +18,8 @@ load_dotenv(Path(__file__).parent.parent.parent / ".env")
 from rag_store import SimulationStore
 from beam_stream import run_beam_optimization
 from gear_stream import run_gear_optimization
+from scipy_stream import run_scipy_beam
+from interview import send_message as _interview_message
 from fea_viz import simulate_fea_viz
 
 _ROOT   = Path(__file__).parent.parent.parent   # aero-opt root
@@ -152,6 +154,33 @@ async def optimize_gear(body: GearOptRequest):
         media_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )
+
+
+class ScipyBeamRequest(BaseModel):
+    H_init: float = 0.010
+    L: float = 0.100
+    load: float = 500.0
+
+
+class InterviewRequest(BaseModel):
+    messages: list
+
+
+@app.post("/api/optimize/beam/scipy")
+async def optimize_beam_scipy(body: ScipyBeamRequest):
+    params = {"H_init": body.H_init, "L": body.L, "load": body.load}
+    return StreamingResponse(
+        _sse_stream(run_scipy_beam, params),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
+
+
+@app.post("/api/interview/message")
+async def interview_message(body: InterviewRequest):
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    result = await asyncio.to_thread(_interview_message, body.messages, api_key)
+    return result
 
 
 @app.get("/api/fea/viz")

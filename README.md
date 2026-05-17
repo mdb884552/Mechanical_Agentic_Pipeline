@@ -179,6 +179,41 @@ The same framework, applied to a completely different engineering domain (no FEA
 
 ---
 
+## Live Dashboard
+
+The pipeline ships with a full-stack web dashboard for interactive demos.
+
+**Tabs:**
+
+| Tab | What it shows |
+|---|---|
+| **Beam** | Run the LangGraph agent on the cantilever beam — watch it reason step by step |
+| **Gear** | Same agent framework applied to a spur gear pinion (two design variables) |
+| **Race** | Side-by-side: scipy SLSQP vs. the AI agent on the same problem simultaneously |
+| **Interview** | Describe your design intent in plain language — agent builds the problem spec through Q&A, then optimizes |
+| **Compare** | Best results across all stored runs with mass-reduction bar chart |
+| **Guide** | In-app how-to guide and glossary |
+
+**Running locally:**
+
+```bash
+# Backend (FastAPI + SSE streaming)
+cd dashboard/backend
+pip install -r ../../requirements-web.txt
+uvicorn main:app --reload --port 8000
+
+# Frontend (React + Vite)
+cd dashboard/frontend
+npm install
+npm run dev     # dev server at http://localhost:5173
+```
+
+The dev server proxies `/api/*` to the FastAPI backend. In production the backend serves the Vite `dist/` folder directly.
+
+**Deployment (Render):** See `render.yaml`. Set `ANTHROPIC_API_KEY` as an environment variable in the Render dashboard.
+
+---
+
 ## Quick Start
 
 ```bash
@@ -229,13 +264,35 @@ Mechanical_Agentic_Pipeline/
 ├── export_stl.py        # Phase 5 — STL export for 3D printing
 ├── validate_physical.py # Phase 5 — FEA vs measured data comparison
 ├── fea_validation.py    # Phase 1 — FEA validation vs analytical
-└── artifacts/           # Committed plots and visuals
-    ├── phase1/
-    ├── phase2/
-    ├── phase3/
-    ├── phase4/
-    ├── gear/
-    └── benchmark/
+├── artifacts/           # Committed plots and visuals
+│   ├── phase1/
+│   ├── phase2/
+│   ├── phase3/
+│   ├── phase4/
+│   ├── gear/
+│   └── benchmark/
+└── dashboard/
+    ├── backend/
+    │   ├── main.py          # FastAPI app — SSE streaming endpoints
+    │   ├── beam_stream.py   # Agent beam optimization generator
+    │   ├── gear_stream.py   # Agent gear optimization generator
+    │   ├── scipy_stream.py  # scipy SLSQP streaming (Race tab)
+    │   ├── interview.py     # Multi-turn Claude interview agent
+    │   └── fea_viz.py       # FEA deformation visualization
+    └── frontend/
+        └── src/
+            ├── components/
+            │   ├── BeamPage.jsx       # Beam optimization UI
+            │   ├── GearPage.jsx       # Gear optimization UI
+            │   ├── RacePage.jsx       # Side-by-side race view
+            │   ├── InterviewPage.jsx  # Chat-based intent capture
+            │   ├── ComparePage.jsx    # Stored results comparison
+            │   ├── GuidePage.jsx      # In-app how-to guide
+            │   ├── ConvergenceChart.jsx
+            │   ├── IterationFeed.jsx
+            │   ├── FEAViz.jsx
+            │   └── HistoryTable.jsx
+            └── api.js                 # SSE streaming + REST helpers
 ```
 
 ---

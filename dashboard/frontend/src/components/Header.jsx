@@ -7,15 +7,18 @@ export function Header({ activeTab, onTabChange, stats }) {
       </div>
 
       <nav className="header-nav">
-        {['beam', 'gear', 'compare'].map(tab => (
+        {['beam', 'gear', 'race', 'interview', 'compare', 'guide'].map(tab => (
           <button
             key={tab}
             className={`nav-btn ${activeTab === tab ? 'active' : ''}`}
             onClick={() => onTabChange(tab)}
           >
-            {tab === 'beam'    ? 'Beam'         :
-             tab === 'gear'    ? 'Gear'         :
-                                 'Compare'}
+            {tab === 'beam'      ? 'Beam'      :
+             tab === 'gear'      ? 'Gear'      :
+             tab === 'race'      ? 'Race'      :
+             tab === 'interview' ? 'Interview' :
+             tab === 'guide'     ? 'Guide'     :
+                                   'Compare'}
           </button>
         ))}
       </nav>

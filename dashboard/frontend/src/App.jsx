@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
 import { fetchStats } from './api'
-import { Header }      from './components/Header'
-import { BeamPage }    from './components/BeamPage'
-import { GearPage }    from './components/GearPage'
-import { ComparePage } from './components/ComparePage'
+import { Header }         from './components/Header'
+import { BeamPage }       from './components/BeamPage'
+import { GearPage }       from './components/GearPage'
+import { ComparePage }    from './components/ComparePage'
+import { RacePage }       from './components/RacePage'
+import { InterviewPage }  from './components/InterviewPage'
+import { GuidePage }      from './components/GuidePage'
 
 export default function App() {
   const [tab,   setTab]   = useState('beam')
@@ -20,9 +23,12 @@ export default function App() {
       <Header activeTab={tab} onTabChange={setTab} stats={stats} />
 
       <main className="page-content">
-        {tab === 'beam'    && <BeamPage />}
-        {tab === 'gear'    && <GearPage />}
-        {tab === 'compare' && <ComparePage />}
+        {tab === 'beam'      && <BeamPage />}
+        {tab === 'gear'      && <GearPage />}
+        {tab === 'compare'   && <ComparePage />}
+        {tab === 'race'      && <RacePage />}
+        {tab === 'interview' && <InterviewPage />}
+        {tab === 'guide'     && <GuidePage />}
       </main>
     </div>
   )
