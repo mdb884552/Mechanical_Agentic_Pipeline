@@ -117,12 +117,22 @@ The agent starts from an infeasible design and works toward the constraint bound
 | 4–6 | bisecting | OK | Binary search on constraint boundary |
 | **7** | **8.32** | **OK** | **Converged — 0.1% from scipy** |
 
-**Dual LLM deployment:**
+**Two deployment paths:**
+
+| | Web App | Run Locally |
+|---|---|---|
+| LLM | Claude API (best results) | Ollama llama3.1:8b — benchmarked winner |
+| Setup | Zero | Clone repo, `pip install`, `ollama serve` |
+| Data leaves machine | Yes (Anthropic API) | **No — fully on-premise** |
+| Best for | Demo, evaluation | IP-sensitive designs, air-gapped environments, cost at scale |
+
 ```bash
 python agent.py                            # Claude API (cloud)
 python agent.py --local                    # Ollama llama3.1:8b (on-premise)
 python agent.py --local --model qwen2.5:7b # alternate local model
 ```
+
+> **Privacy requirement?** Clone the repo and run locally — no design data leaves your machine. See [Quick Start](#quick-start) below.
 
 ![Agent run](artifacts/phase4/langgraph_diagram.png)
 
