@@ -1,0 +1,8 @@
+.env
+venv/
+__pycache__/
+chroma_db/
+chroma_db_gear/
+*.pyc
+*.png
+!artifacts/**/*.png
