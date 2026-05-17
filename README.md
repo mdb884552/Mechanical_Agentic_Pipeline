@@ -2,11 +2,14 @@
 
 > A physics-validated, multi-domain optimization pipeline where a LangGraph AI agent replaces manual iterative engineering design. Built in open-source Python. Mechanical/aerospace is the testbed — the architecture transfers directly to any AI automation role.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-aero--opt.onrender.com-brightgreen)](https://aero-opt.onrender.com)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.2-purple.svg)](https://github.com/langchain-ai/langgraph)
 [![Claude API](https://img.shields.io/badge/LLM-Claude%20Sonnet%204.6-orange.svg)](https://anthropic.com)
 [![Ollama](https://img.shields.io/badge/Local%20LLM-Ollama-green.svg)](https://ollama.ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+**[Try the live demo](https://aero-opt.onrender.com)** — run the AI agent in your browser, no setup required.
 
 ---
 
@@ -227,7 +230,7 @@ The dev server proxies `/api/*` to the FastAPI backend. In production the backen
 ## Quick Start
 
 ```bash
-git clone https://github.com/mdb884552/Mechanical_Agentic_Pipeline
+git clone https://github.com/michaelbarfoot/Mechanical_Agentic_Pipeline
 cd Mechanical_Agentic_Pipeline
 python -m venv venv && venv\Scripts\activate   # Windows
 pip install -r requirements.txt
