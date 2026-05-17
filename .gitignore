@@ -6,3 +6,11 @@ chroma_db_gear/
 *.pyc
 *.png
 !artifacts/**/*.png
+
+# Frontend build output (not committed — Render builds this)
+dashboard/frontend/dist/
+dashboard/frontend/node_modules/
+
+# Render server logs
+dashboard/*.log
+dashboard/*.err

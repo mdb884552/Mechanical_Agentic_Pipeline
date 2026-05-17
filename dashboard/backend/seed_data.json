@@ -1,0 +1,760 @@
+﻿{
+    "beam":  [
+                 {
+                     "document":  "Beam design L=100.0mm H=8.72mm load=500N. deflection=0.0432mm stress=4.14MPa mass=2.3546kg_per_m. Status=FEASIBLE. dashboard iter 8",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-17T16:31:01.288455",
+                                      "mass_per_depth":  2.354646145500001,
+                                      "L":  0.1,
+                                      "max_von_mises":  4135921.4685138864,
+                                      "max_deflection":  4.3248172912837128E-05,
+                                      "H":  0.008720911650000005,
+                                      "feasible":  true,
+                                      "load":  500.0
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=7.93mm load=500N. deflection=0.0575mm stress=5.00MPa mass=2.1406kg_per_m. Status=INFEASIBLE. dashboard iter 7",
+                     "metadata":  {
+                                      "max_deflection":  5.7514075338607069E-05,
+                                      "load":  500.0,
+                                      "timestamp":  "2026-05-17T16:30:59.442572",
+                                      "L":  0.1,
+                                      "max_von_mises":  5001018.718129918,
+                                      "H":  0.007928101500000003,
+                                      "feasible":  false,
+                                      "mass_per_depth":  2.1405874050000007
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.35mm load=500N. deflection=0.0493mm stress=4.51MPa mass=2.2532kg_per_m. Status=FEASIBLE. dashboard iter 6",
+                     "metadata":  {
+                                      "max_von_mises":  4511583.3614858845,
+                                      "feasible":  true,
+                                      "load":  500.0,
+                                      "mass_per_depth":  2.253249900000001,
+                                      "timestamp":  "2026-05-17T16:30:57.781700",
+                                      "max_deflection":  4.9332467009944938E-05,
+                                      "H":  0.008345370000000003,
+                                      "L":  0.1
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.78mm load=500N. deflection=0.0423mm stress=4.07MPa mass=2.3718kg_per_m. Status=FEASIBLE. dashboard iter 5",
+                     "metadata":  {
+                                      "L":  0.1,
+                                      "load":  500.0,
+                                      "H":  0.008784600000000004,
+                                      "mass_per_depth":  2.371842000000001,
+                                      "max_von_mises":  4073697.3787315944,
+                                      "timestamp":  "2026-05-17T16:30:56.037672",
+                                      "max_deflection":  4.2317211174597159E-05,
+                                      "feasible":  true
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=7.99mm load=500N. deflection=0.0563mm stress=4.93MPa mass=2.1562kg_per_m. Status=INFEASIBLE. dashboard iter 4",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-17T16:30:54.225729",
+                                      "mass_per_depth":  2.1562200000000007,
+                                      "max_von_mises":  4926326.239750398,
+                                      "L":  0.1,
+                                      "feasible":  false,
+                                      "load":  500.0,
+                                      "H":  0.007986000000000002,
+                                      "max_deflection":  5.6275312682949153E-05
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=7.26mm load=500N. deflection=0.0748mm stress=5.95MPa mass=1.9602kg_per_m. Status=INFEASIBLE. dashboard iter 3",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-17T16:30:52.437879",
+                                      "max_von_mises":  5954325.698769806,
+                                      "load":  500.0,
+                                      "H":  0.007260000000000002,
+                                      "feasible":  false,
+                                      "mass_per_depth":  1.9602000000000004,
+                                      "max_deflection":  7.4849589825074972E-05,
+                                      "L":  0.1
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=6.60mm load=500N. deflection=0.0996mm stress=7.20MPa mass=1.7820kg_per_m. Status=INFEASIBLE. dashboard iter 2",
+                     "metadata":  {
+                                      "H":  0.006600000000000001,
+                                      "L":  0.1,
+                                      "mass_per_depth":  1.7820000000000005,
+                                      "max_deflection":  9.9568333176660841E-05,
+                                      "feasible":  false,
+                                      "timestamp":  "2026-05-17T16:30:50.685509",
+                                      "load":  500.0,
+                                      "max_von_mises":  7200006.674996978
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=6.00mm load=500N. deflection=0.1325mm stress=8.71MPa mass=1.6200kg_per_m. Status=INFEASIBLE. dashboard iter 1",
+                     "metadata":  {
+                                      "feasible":  false,
+                                      "max_deflection":  0.00013246523039589858,
+                                      "H":  0.006,
+                                      "load":  500.0,
+                                      "L":  0.1,
+                                      "timestamp":  "2026-05-17T16:30:48.176455",
+                                      "max_von_mises":  8708730.070861707,
+                                      "mass_per_depth":  1.62
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.32mm load=500N. deflection=0.0498mm stress=4.54MPa mass=2.2464kg_per_m. Status=FEASIBLE. agent iter 7 -- FEASIBLE",
+                     "metadata":  {
+                                      "H":  0.00832,
+                                      "load":  500.0,
+                                      "mass_per_depth":  2.2464,
+                                      "L":  0.1,
+                                      "max_deflection":  4.9784078170752792E-05,
+                                      "timestamp":  "2026-05-16T18:37:15.564360",
+                                      "max_von_mises":  4543083.509318003,
+                                      "feasible":  true
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.35mm load=500N. deflection=0.0493mm stress=4.51MPa mass=2.2545kg_per_m. Status=FEASIBLE. agent iter 6 -- FEASIBLE",
+                     "metadata":  {
+                                      "H":  0.00835,
+                                      "load":  500.0,
+                                      "max_von_mises":  4506769.254066785,
+                                      "feasible":  true,
+                                      "max_deflection":  4.9250709595368986E-05,
+                                      "timestamp":  "2026-05-16T18:37:11.808431",
+                                      "mass_per_depth":  2.2544999999999997,
+                                      "L":  0.1
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.40mm load=500N. deflection=0.0484mm stress=4.46MPa mass=2.2680kg_per_m. Status=FEASIBLE. agent iter 5 -- FEASIBLE",
+                     "metadata":  {
+                                      "L":  0.1,
+                                      "timestamp":  "2026-05-16T18:37:08.333998",
+                                      "mass_per_depth":  2.268,
+                                      "H":  0.0084,
+                                      "feasible":  true,
+                                      "max_von_mises":  4455287.601964979,
+                                      "max_deflection":  4.8379228094934988E-05,
+                                      "load":  500.0
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.50mm load=500N. deflection=0.0467mm stress=4.35MPa mass=2.2950kg_per_m. Status=FEASIBLE. agent iter 4 -- FEASIBLE",
+                     "metadata":  {
+                                      "max_von_mises":  4350125.173921094,
+                                      "max_deflection":  4.669676373781049E-05,
+                                      "L":  0.1,
+                                      "H":  0.0085,
+                                      "timestamp":  "2026-05-16T18:37:04.770316",
+                                      "load":  500.0,
+                                      "feasible":  true,
+                                      "mass_per_depth":  2.2950000000000004
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.30mm load=500N. deflection=0.0501mm stress=4.56MPa mass=2.2410kg_per_m. Status=INFEASIBLE. agent iter 3 -- INFEASIBLE defl=0.0501mm stress=4.6MPa",
+                     "metadata":  {
+                                      "mass_per_depth":  2.241,
+                                      "max_deflection":  5.01436929185156E-05,
+                                      "L":  0.1,
+                                      "feasible":  false,
+                                      "H":  0.0083,
+                                      "max_von_mises":  4564163.242342312,
+                                      "timestamp":  "2026-05-16T18:37:01.107514",
+                                      "load":  500.0
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=9.00mm load=500N. deflection=0.0394mm stress=3.88MPa mass=2.4300kg_per_m. Status=FEASIBLE. agent iter 2 -- FEASIBLE",
+                     "metadata":  {
+                                      "load":  500.0,
+                                      "feasible":  true,
+                                      "H":  0.009,
+                                      "mass_per_depth":  2.4299999999999997,
+                                      "L":  0.1,
+                                      "max_deflection":  3.9361028162628125E-05,
+                                      "timestamp":  "2026-05-16T18:36:57.432732",
+                                      "max_von_mises":  3883669.482983026
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=6.00mm load=500N. deflection=0.1325mm stress=8.71MPa mass=1.6200kg_per_m. Status=INFEASIBLE. agent iter 1 -- INFEASIBLE defl=0.1325mm stress=8.7MPa",
+                     "metadata":  {
+                                      "max_von_mises":  8708730.070861707,
+                                      "max_deflection":  0.00013246523039589858,
+                                      "timestamp":  "2026-05-16T18:36:53.013208",
+                                      "load":  500.0,
+                                      "L":  0.1,
+                                      "mass_per_depth":  1.62,
+                                      "feasible":  false,
+                                      "H":  0.006
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.33mm load=500N. deflection=0.0496mm stress=4.53MPa mass=2.2491kg_per_m. Status=FEASIBLE. agent iter 7 -- FEASIBLE",
+                     "metadata":  {
+                                      "H":  0.00833,
+                                      "timestamp":  "2026-05-16T18:35:29.028353",
+                                      "feasible":  true,
+                                      "max_deflection":  4.9605563087734945E-05,
+                                      "load":  500.0,
+                                      "max_von_mises":  4532600.574193838,
+                                      "mass_per_depth":  2.2491000000000003,
+                                      "L":  0.1
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.36mm load=500N. deflection=0.0491mm stress=4.50MPa mass=2.2572kg_per_m. Status=FEASIBLE. agent iter 6 -- FEASIBLE",
+                     "metadata":  {
+                                      "max_von_mises":  4496398.909697448,
+                                      "H":  0.00836,
+                                      "timestamp":  "2026-05-16T18:35:25.547855",
+                                      "max_deflection":  4.9074744569752456E-05,
+                                      "mass_per_depth":  2.2571999999999997,
+                                      "feasible":  true,
+                                      "load":  500.0,
+                                      "L":  0.1
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.42mm load=500N. deflection=0.0480mm stress=4.43MPa mass=2.2734kg_per_m. Status=FEASIBLE. agent iter 5 -- FEASIBLE",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-16T18:35:21.963941",
+                                      "load":  500.0,
+                                      "max_von_mises":  4434951.4989468,
+                                      "feasible":  true,
+                                      "mass_per_depth":  2.2734,
+                                      "max_deflection":  4.8036406897043571E-05,
+                                      "L":  0.1,
+                                      "H":  0.00842
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.50mm load=500N. deflection=0.0467mm stress=4.35MPa mass=2.2950kg_per_m. Status=FEASIBLE. agent iter 4 -- FEASIBLE",
+                     "metadata":  {
+                                      "load":  500.0,
+                                      "max_von_mises":  4350125.173921094,
+                                      "feasible":  true,
+                                      "L":  0.1,
+                                      "timestamp":  "2026-05-16T18:35:18.268015",
+                                      "H":  0.0085,
+                                      "mass_per_depth":  2.2950000000000004,
+                                      "max_deflection":  4.669676373781049E-05
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.30mm load=500N. deflection=0.0501mm stress=4.56MPa mass=2.2410kg_per_m. Status=INFEASIBLE. agent iter 3 -- INFEASIBLE defl=0.0501mm stress=4.6MPa",
+                     "metadata":  {
+                                      "load":  500.0,
+                                      "mass_per_depth":  2.241,
+                                      "H":  0.0083,
+                                      "max_deflection":  5.01436929185156E-05,
+                                      "timestamp":  "2026-05-16T18:35:14.754052",
+                                      "L":  0.1,
+                                      "max_von_mises":  4564163.242342312,
+                                      "feasible":  false
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=9.00mm load=500N. deflection=0.0394mm stress=3.88MPa mass=2.4300kg_per_m. Status=FEASIBLE. agent iter 2 -- FEASIBLE",
+                     "metadata":  {
+                                      "mass_per_depth":  2.4299999999999997,
+                                      "L":  0.1,
+                                      "load":  500.0,
+                                      "max_deflection":  3.9361028162628125E-05,
+                                      "feasible":  true,
+                                      "max_von_mises":  3883669.482983026,
+                                      "timestamp":  "2026-05-16T18:35:10.206249",
+                                      "H":  0.009
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=6.00mm load=500N. deflection=0.1325mm stress=8.71MPa mass=1.6200kg_per_m. Status=INFEASIBLE. agent iter 1 -- INFEASIBLE defl=0.1325mm stress=8.7MPa",
+                     "metadata":  {
+                                      "feasible":  false,
+                                      "load":  500.0,
+                                      "max_deflection":  0.00013246523039589858,
+                                      "L":  0.1,
+                                      "timestamp":  "2026-05-16T18:35:05.545157",
+                                      "mass_per_depth":  1.62,
+                                      "max_von_mises":  8708730.070861707,
+                                      "H":  0.006
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=6.00mm load=500N. deflection=0.1325mm stress=8.71MPa mass=1.6200kg_per_m. Status=INFEASIBLE. agent iter 1 -- INFEASIBLE defl=0.1325mm stress=8.7MPa",
+                     "metadata":  {
+                                      "feasible":  false,
+                                      "timestamp":  "2026-05-16T18:33:47.764517",
+                                      "max_von_mises":  8708730.070861707,
+                                      "max_deflection":  0.00013246523039589858,
+                                      "L":  0.1,
+                                      "load":  500.0,
+                                      "H":  0.006,
+                                      "mass_per_depth":  1.62
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.31mm load=500N. deflection=0.0500mm stress=4.56MPa mass=2.2432kg_per_m. Status=FEASIBLE. Phase 3 scipy SLSQP optimal: minimum-mass design, deflection constraint active",
+                     "metadata":  {
+                                      "max_deflection":  4.99994315988673E-05,
+                                      "timestamp":  "2026-05-16T18:09:28.094484",
+                                      "H":  0.008308,
+                                      "feasible":  true,
+                                      "L":  0.1,
+                                      "mass_per_depth":  2.24316,
+                                      "max_von_mises":  4555713.058750874,
+                                      "load":  500.0
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=25.00mm load=500N. deflection=0.0019mm stress=0.51MPa mass=6.7500kg_per_m. Status=FEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "H":  0.025,
+                                      "timestamp":  "2026-05-16T18:09:27.725558",
+                                      "load":  500.0,
+                                      "max_von_mises":  514228.7214855006,
+                                      "max_deflection":  1.9095346097588972E-06,
+                                      "mass_per_depth":  6.75,
+                                      "feasible":  true,
+                                      "L":  0.1
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=22.67mm load=500N. deflection=0.0025mm stress=0.62MPa mass=6.1200kg_per_m. Status=FEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "L":  0.1,
+                                      "max_von_mises":  623480.966635364,
+                                      "H":  0.02266666666666667,
+                                      "max_deflection":  2.5412650997027907E-06,
+                                      "timestamp":  "2026-05-16T18:09:27.412721",
+                                      "feasible":  true,
+                                      "mass_per_depth":  6.12,
+                                      "load":  500.0
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=20.33mm load=500N. deflection=0.0035mm stress=0.77MPa mass=5.4900kg_per_m. Status=FEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-16T18:09:27.098288",
+                                      "max_deflection":  3.4945957109801373E-06,
+                                      "H":  0.020333333333333335,
+                                      "max_von_mises":  771020.7072352844,
+                                      "feasible":  true,
+                                      "load":  500.0,
+                                      "mass_per_depth":  5.49,
+                                      "L":  0.1
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=18.00mm load=500N. deflection=0.0050mm stress=0.98MPa mass=4.8600kg_per_m. Status=FEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "H":  0.018000000000000002,
+                                      "max_deflection":  5.004799776014829E-06,
+                                      "L":  0.1,
+                                      "load":  500.0,
+                                      "mass_per_depth":  4.86,
+                                      "max_von_mises":  980650.2144240364,
+                                      "timestamp":  "2026-05-16T18:09:26.776474",
+                                      "feasible":  true
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=15.67mm load=500N. deflection=0.0075mm stress=1.29MPa mass=4.2300kg_per_m. Status=FEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "load":  500.0,
+                                      "max_deflection":  7.5478416629620894E-06,
+                                      "max_von_mises":  1290668.4661494684,
+                                      "timestamp":  "2026-05-16T18:09:26.468378",
+                                      "L":  0.1,
+                                      "H":  0.01566666666666667,
+                                      "mass_per_depth":  4.23,
+                                      "feasible":  true
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=13.33mm load=500N. deflection=0.0122mm stress=1.78MPa mass=3.6000kg_per_m. Status=FEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "load":  500.0,
+                                      "feasible":  true,
+                                      "max_von_mises":  1778777.6211584082,
+                                      "mass_per_depth":  3.6,
+                                      "timestamp":  "2026-05-16T18:09:26.147099",
+                                      "L":  0.1,
+                                      "max_deflection":  1.2185942232953132E-05,
+                                      "H":  0.013333333333333334
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=11.00mm load=500N. deflection=0.0216mm stress=2.61MPa mass=2.9700kg_per_m. Status=FEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "L":  0.1,
+                                      "feasible":  true,
+                                      "max_deflection":  2.161653887475271E-05,
+                                      "mass_per_depth":  2.97,
+                                      "max_von_mises":  2606374.4647195116,
+                                      "H":  0.011,
+                                      "timestamp":  "2026-05-16T18:09:25.814375",
+                                      "load":  500.0
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=8.67mm load=500N. deflection=0.0441mm stress=4.19MPa mass=2.3400kg_per_m. Status=FEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "max_deflection":  4.4062483087991172E-05,
+                                      "max_von_mises":  4185848.029240374,
+                                      "timestamp":  "2026-05-16T18:09:25.459335",
+                                      "L":  0.1,
+                                      "mass_per_depth":  2.34,
+                                      "feasible":  true,
+                                      "H":  0.008666666666666666,
+                                      "load":  500.0
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=6.33mm load=500N. deflection=0.1127mm stress=7.82MPa mass=1.7100kg_per_m. Status=INFEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "feasible":  false,
+                                      "max_deflection":  0.00011265864604447888,
+                                      "max_von_mises":  7815506.7062180815,
+                                      "L":  0.1,
+                                      "load":  500.0,
+                                      "mass_per_depth":  1.71,
+                                      "H":  0.006333333333333333,
+                                      "timestamp":  "2026-05-16T18:09:25.068634"
+                                  }
+                 },
+                 {
+                     "document":  "Beam design L=100.0mm H=4.00mm load=500N. deflection=0.4466mm stress=19.55MPa mass=1.0800kg_per_m. Status=INFEASIBLE. H sweep seed data",
+                     "metadata":  {
+                                      "H":  0.004,
+                                      "L":  0.1,
+                                      "max_von_mises":  19550159.58053831,
+                                      "load":  500.0,
+                                      "feasible":  false,
+                                      "max_deflection":  0.00044657440636089094,
+                                      "timestamp":  "2026-05-16T18:09:13.809301",
+                                      "mass_per_depth":  1.08
+                                  }
+                 }
+             ],
+    "gear":  [
+                 {
+                     "document":  "Gear design m=3.54mm b=46.3mm torque=50Nm. bending=39.6MPa contact=538.4MPa mass=804.9g pitch_diam=53.1mm. Status=FEASIBLE. agent iter 9 -- FEASIBLE",
+                     "metadata":  {
+                                      "mass":  0.8048771001399909,
+                                      "contact_stress":  538.3552749613252,
+                                      "b":  46.3,
+                                      "bending_stress":  39.620798874659016,
+                                      "timestamp":  "2026-05-16T20:07:08.882300",
+                                      "feasible":  true,
+                                      "m":  3.54
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.54mm b=43.9mm torque=50Nm. bending=41.7MPa contact=552.1MPa mass=765.3g pitch_diam=53.1mm. Status=INFEASIBLE. agent iter 8 -- INFEASIBLE sb=42MPa sc=552MPa",
+                     "metadata":  {
+                                      "contact_stress":  552.0854506492435,
+                                      "b":  43.94815454687498,
+                                      "m":  3.543122000000002,
+                                      "mass":  0.765340881978699,
+                                      "bending_stress":  41.66754246946516,
+                                      "timestamp":  "2026-05-16T20:07:05.150943",
+                                      "feasible":  false
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.54mm b=46.3mm torque=50Nm. bending=39.6MPa contact=538.1MPa mass=805.6g pitch_diam=53.1mm. Status=FEASIBLE. agent iter 7 -- FEASIBLE",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-16T20:06:55.042078",
+                                      "mass":  0.8056219810302097,
+                                      "bending_stress":  39.58416534599189,
+                                      "m":  3.543122000000002,
+                                      "b":  46.261215312499985,
+                                      "feasible":  true,
+                                      "contact_stress":  538.1063348239355
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.22mm b=40.2mm torque=50Nm. bending=55.1MPa contact=634.8MPa mass=579.0g pitch_diam=48.3mm. Status=INFEASIBLE. agent iter 6 -- INFEASIBLE sb=55MPa sc=635MPa",
+                     "metadata":  {
+                                      "m":  3.2210200000000015,
+                                      "mass":  0.5789593827022707,
+                                      "timestamp":  "2026-05-16T20:06:43.866897",
+                                      "bending_stress":  55.08136607894773,
+                                      "feasible":  false,
+                                      "contact_stress":  634.7602318783834,
+                                      "b":  40.22714374999999
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=2.93mm b=35.0mm torque=50Nm. bending=76.6MPa contact=748.8MPa mass=416.1g pitch_diam=43.9mm. Status=INFEASIBLE. agent iter 5 -- INFEASIBLE sb=77MPa sc=749MPa",
+                     "metadata":  {
+                                      "contact_stress":  748.7749649075062,
+                                      "bending_stress":  76.64572089885577,
+                                      "timestamp":  "2026-05-16T20:06:32.812819",
+                                      "b":  34.980124999999994,
+                                      "feasible":  false,
+                                      "mass":  0.41606854667788035,
+                                      "m":  2.9282000000000012
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=2.66mm b=30.4mm torque=50Nm. bending=106.7MPa contact=883.3MPa mass=299.0g pitch_diam=39.9mm. Status=INFEASIBLE. agent iter 4 -- INFEASIBLE sb=107MPa sc=883MPa",
+                     "metadata":  {
+                                      "bending_stress":  106.65252063075782,
+                                      "contact_stress":  883.2688626587706,
+                                      "feasible":  false,
+                                      "m":  2.662000000000001,
+                                      "mass":  0.29900722003440916,
+                                      "timestamp":  "2026-05-16T20:06:21.959754",
+                                      "b":  30.417499999999997
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=2.42mm b=26.4mm torque=50Nm. bending=148.4MPa contact=1041.9MPa mass=214.9g pitch_diam=36.3mm. Status=INFEASIBLE. agent iter 3 -- INFEASIBLE sb=148MPa sc=1042MPa",
+                     "metadata":  {
+                                      "m":  2.4200000000000004,
+                                      "contact_stress":  1041.920363668795,
+                                      "timestamp":  "2026-05-16T20:06:11.626179",
+                                      "bending_stress":  148.4069824576995,
+                                      "feasible":  false,
+                                      "b":  26.45,
+                                      "mass":  0.2148812217279261
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=2.20mm b=23.0mm torque=50Nm. bending=206.5MPa contact=1229.1MPa mass=154.4g pitch_diam=33.0mm. Status=INFEASIBLE. agent iter 2 -- INFEASIBLE sb=207MPa sc=1229MPa",
+                     "metadata":  {
+                                      "bending_stress":  206.50831608988895,
+                                      "contact_stress":  1229.0686223896794,
+                                      "timestamp":  "2026-05-16T20:06:00.116446",
+                                      "feasible":  false,
+                                      "mass":  0.15442416221913471,
+                                      "b":  23.0,
+                                      "m":  2.2
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=2.00mm b=20.0mm torque=50Nm. bending=287.4MPa contact=1449.8MPa mass=111.0g pitch_diam=30.0mm. Status=INFEASIBLE. agent iter 1 -- INFEASIBLE sb=287MPa sc=1450MPa",
+                     "metadata":  {
+                                      "contact_stress":  1449.8321860451283,
+                                      "timestamp":  "2026-05-16T20:05:49.027248",
+                                      "m":  2.0,
+                                      "b":  20.0,
+                                      "bending_stress":  287.35632183908046,
+                                      "mass":  0.11097676048805943,
+                                      "feasible":  false
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=2.00mm b=20.0mm torque=50Nm. bending=287.4MPa contact=1449.8MPa mass=111.0g pitch_diam=30.0mm. Status=INFEASIBLE. agent iter 1 -- INFEASIBLE sb=287MPa sc=1450MPa",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-16T20:05:30.698177",
+                                      "b":  20.0,
+                                      "contact_stress":  1449.8321860451283,
+                                      "feasible":  false,
+                                      "mass":  0.11097676048805943,
+                                      "m":  2.0,
+                                      "bending_stress":  287.35632183908046
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.00mm b=80.0mm torque=50Nm. bending=31.9MPa contact=483.3MPa mass=998.8g pitch_diam=45.0mm. Status=FEASIBLE. b-sweep seed, m=3mm",
+                     "metadata":  {
+                                      "feasible":  true,
+                                      "timestamp":  "2026-05-16T20:04:54.192487",
+                                      "b":  80.0,
+                                      "m":  3.0,
+                                      "mass":  0.998790844392535,
+                                      "contact_stress":  483.27739534837616,
+                                      "bending_stress":  31.928480204342275
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.00mm b=70.0mm torque=50Nm. bending=36.5MPa contact=516.6MPa mass=873.9g pitch_diam=45.0mm. Status=FEASIBLE. b-sweep seed, m=3mm",
+                     "metadata":  {
+                                      "contact_stress":  516.6452674760349,
+                                      "m":  3.0,
+                                      "timestamp":  "2026-05-16T20:04:54.000098",
+                                      "b":  70.0,
+                                      "feasible":  true,
+                                      "mass":  0.8739419888434681,
+                                      "bending_stress":  36.48969166210546
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.00mm b=60.0mm torque=50Nm. bending=42.6MPa contact=558.0MPa mass=749.1g pitch_diam=45.0mm. Status=INFEASIBLE. b-sweep seed, m=3mm",
+                     "metadata":  {
+                                      "contact_stress":  558.0406685952923,
+                                      "m":  3.0,
+                                      "feasible":  false,
+                                      "b":  60.0,
+                                      "bending_stress":  42.57130693912303,
+                                      "timestamp":  "2026-05-16T20:04:53.798630",
+                                      "mass":  0.7490931332944012
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.00mm b=50.0mm torque=50Nm. bending=51.1MPa contact=611.3MPa mass=624.2g pitch_diam=45.0mm. Status=INFEASIBLE. b-sweep seed, m=3mm",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-16T20:04:53.594975",
+                                      "feasible":  false,
+                                      "contact_stress":  611.3029243898127,
+                                      "bending_stress":  51.08556832694764,
+                                      "b":  50.0,
+                                      "m":  3.0,
+                                      "mass":  0.6242442777453343
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.00mm b=40.0mm torque=50Nm. bending=63.9MPa contact=683.5MPa mass=499.4g pitch_diam=45.0mm. Status=INFEASIBLE. b-sweep seed, m=3mm",
+                     "metadata":  {
+                                      "contact_stress":  683.4574468900178,
+                                      "feasible":  false,
+                                      "mass":  0.4993954221962675,
+                                      "b":  40.0,
+                                      "timestamp":  "2026-05-16T20:04:53.388612",
+                                      "m":  3.0,
+                                      "bending_stress":  63.85696040868455
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.00mm b=30.0mm torque=50Nm. bending=85.1MPa contact=789.2MPa mass=374.5g pitch_diam=45.0mm. Status=INFEASIBLE. b-sweep seed, m=3mm",
+                     "metadata":  {
+                                      "b":  30.0,
+                                      "m":  3.0,
+                                      "timestamp":  "2026-05-16T20:04:53.174884",
+                                      "feasible":  false,
+                                      "bending_stress":  85.14261387824607,
+                                      "mass":  0.3745465666472006,
+                                      "contact_stress":  789.1886818832121
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.00mm b=20.0mm torque=50Nm. bending=127.7MPa contact=966.6MPa mass=249.7g pitch_diam=45.0mm. Status=INFEASIBLE. b-sweep seed, m=3mm",
+                     "metadata":  {
+                                      "mass":  0.24969771109813377,
+                                      "feasible":  false,
+                                      "bending_stress":  127.7139208173691,
+                                      "m":  3.0,
+                                      "b":  20.0,
+                                      "timestamp":  "2026-05-16T20:04:52.976483",
+                                      "contact_stress":  966.5547906967524
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.00mm b=15.0mm torque=50Nm. bending=170.3MPa contact=1116.1MPa mass=187.3g pitch_diam=45.0mm. Status=INFEASIBLE. b-sweep seed, m=3mm",
+                     "metadata":  {
+                                      "feasible":  false,
+                                      "b":  15.0,
+                                      "timestamp":  "2026-05-16T20:04:52.773636",
+                                      "m":  3.0,
+                                      "contact_stress":  1116.0813371905847,
+                                      "bending_stress":  170.28522775649213,
+                                      "mass":  0.1872732833236003
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=5.00mm b=40.0mm torque=50Nm. bending=23.0MPa contact=410.1MPa mass=1387.2g pitch_diam=75.0mm. Status=FEASIBLE. m-sweep seed, b=40mm",
+                     "metadata":  {
+                                      "feasible":  true,
+                                      "b":  40.0,
+                                      "contact_stress":  410.0744681340106,
+                                      "m":  5.0,
+                                      "bending_stress":  22.98850574712644,
+                                      "timestamp":  "2026-05-16T20:04:52.566101",
+                                      "mass":  1.3872095061007428
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=4.50mm b=40.0mm torque=50Nm. bending=28.4MPa contact=455.6MPa mass=1123.6g pitch_diam=67.5mm. Status=FEASIBLE. m-sweep seed, b=40mm",
+                     "metadata":  {
+                                      "mass":  1.123639699941602,
+                                      "contact_stress":  455.6382979266785,
+                                      "b":  40.0,
+                                      "m":  4.5,
+                                      "feasible":  true,
+                                      "timestamp":  "2026-05-16T20:04:52.367393",
+                                      "bending_stress":  28.38087129274869
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=4.00mm b=40.0mm torque=50Nm. bending=35.9MPa contact=512.6MPa mass=887.8g pitch_diam=60.0mm. Status=FEASIBLE. m-sweep seed, b=40mm",
+                     "metadata":  {
+                                      "mass":  0.8878140839044756,
+                                      "m":  4.0,
+                                      "contact_stress":  512.5930851675132,
+                                      "feasible":  true,
+                                      "timestamp":  "2026-05-16T20:04:52.174110",
+                                      "b":  40.0,
+                                      "bending_stress":  35.91954022988506
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.50mm b=40.0mm torque=50Nm. bending=46.9MPa contact=585.8MPa mass=679.7g pitch_diam=52.5mm. Status=INFEASIBLE. m-sweep seed, b=40mm",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-16T20:04:51.978158",
+                                      "mass":  0.679732657989364,
+                                      "feasible":  false,
+                                      "b":  40.0,
+                                      "m":  3.5,
+                                      "bending_stress":  46.91531785127845,
+                                      "contact_stress":  585.8206687628723
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=3.00mm b=40.0mm torque=50Nm. bending=63.9MPa contact=683.5MPa mass=499.4g pitch_diam=45.0mm. Status=INFEASIBLE. m-sweep seed, b=40mm",
+                     "metadata":  {
+                                      "mass":  0.4993954221962675,
+                                      "bending_stress":  63.85696040868455,
+                                      "timestamp":  "2026-05-16T20:04:51.752974",
+                                      "m":  3.0,
+                                      "contact_stress":  683.4574468900178,
+                                      "feasible":  false,
+                                      "b":  40.0
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=2.50mm b=40.0mm torque=50Nm. bending=92.0MPa contact=820.1MPa mass=346.8g pitch_diam=37.5mm. Status=INFEASIBLE. m-sweep seed, b=40mm",
+                     "metadata":  {
+                                      "timestamp":  "2026-05-16T20:04:51.513527",
+                                      "feasible":  false,
+                                      "bending_stress":  91.95402298850576,
+                                      "contact_stress":  820.1489362680212,
+                                      "m":  2.5,
+                                      "b":  40.0,
+                                      "mass":  0.3468023765251857
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=2.00mm b=40.0mm torque=50Nm. bending=143.7MPa contact=1025.2MPa mass=222.0g pitch_diam=30.0mm. Status=INFEASIBLE. m-sweep seed, b=40mm",
+                     "metadata":  {
+                                      "b":  40.0,
+                                      "bending_stress":  143.67816091954023,
+                                      "timestamp":  "2026-05-16T20:04:51.288904",
+                                      "feasible":  false,
+                                      "m":  2.0,
+                                      "contact_stress":  1025.1861703350264,
+                                      "mass":  0.2219535209761189
+                                  }
+                 },
+                 {
+                     "document":  "Gear design m=1.50mm b=40.0mm torque=50Nm. bending=255.4MPa contact=1366.9MPa mass=124.8g pitch_diam=22.5mm. Status=INFEASIBLE. m-sweep seed, b=40mm",
+                     "metadata":  {
+                                      "b":  40.0,
+                                      "contact_stress":  1366.9148937800355,
+                                      "timestamp":  "2026-05-16T20:04:50.669023",
+                                      "mass":  0.12484885554906688,
+                                      "bending_stress":  255.4278416347382,
+                                      "m":  1.5,
+                                      "feasible":  false
+                                  }
+                 }
+             ]
+}
