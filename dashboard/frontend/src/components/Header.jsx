@@ -30,7 +30,7 @@ export function Header({ activeTab, onTabChange, stats }) {
       <div className="header-links">
         <a
           className="header-link"
-          href="https://github.com/MichaelBarfoot/aero-opt"
+          href="https://github.com/mdb884552/Mechanical_Agentic_Pipeline-"
           target="_blank"
           rel="noreferrer"
         >
