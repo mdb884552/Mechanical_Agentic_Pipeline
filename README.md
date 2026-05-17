@@ -261,6 +261,6 @@ The next phases move from a standalone Python pipeline to a tool engineers use i
 
 Built by Michael Barfoot, rising ME senior at Texas A&M University, summer 2026.
 
-Portfolio project demonstrating full-stack AI/automation engineering — from physics-based simulation to agentic orchestration to physical hardware validation. Targeting internship roles in aerospace and AI/automation.
+Portfolio project demonstrating full-stack AI/automation engineering — from physics-based simulation to agentic orchestration to physical hardware validation. Targeting internship roles in Mechanical Engineering and AI/automation.
 
-*The aerospace domain is the rigorous testbed. The architecture is the transferable skill.*
+*The Mechanical domain is the rigorous testbed. The architecture is the transferable skill.*
