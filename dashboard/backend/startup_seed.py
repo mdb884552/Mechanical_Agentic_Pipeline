@@ -21,30 +21,23 @@ def seed_if_empty():
 
     data = json.loads(_SEED_FILE.read_text(encoding="utf-8"))
 
-    beam_store = SimulationStore(path=str(_ROOT / "chroma_db"))
-    if beam_store.run_count() == 0:
-        runs = data.get("beam", [])
-        for i, run in enumerate(runs):
-            meta = {k: v for k, v in run["metadata"].items() if v is not None}
-            beam_store.runs.add(
-                documents=[run["document"]],
-                ids=[f"seed_beam_{i}"],
-                metadatas=[meta],
-            )
-        print(f"startup_seed: seeded {len(runs)} beam runs")
-    else:
-        print(f"startup_seed: beam store has {beam_store.run_count()} runs, skipping")
-
-    gear_store = SimulationStore(path=str(_ROOT / "chroma_db_gear"))
-    if gear_store.run_count() == 0:
-        runs = data.get("gear", [])
-        for i, run in enumerate(runs):
-            meta = {k: v for k, v in run["metadata"].items() if v is not None}
-            gear_store.runs.add(
-                documents=[run["document"]],
-                ids=[f"seed_gear_{i}"],
-                metadatas=[meta],
-            )
-        print(f"startup_seed: seeded {len(runs)} gear runs")
-    else:
-        print(f"startup_seed: gear store has {gear_store.run_count()} runs, skipping")
+    for domain, db_name, mass_key in [
+        ("beam", "chroma_db",      "mass_per_depth"),
+        ("gear", "chroma_db_gear", "mass"),
+    ]:
+        try:
+            store = SimulationStore(path=str(_ROOT / db_name))
+            if store.run_count() == 0:
+                runs = data.get(domain, [])
+                for i, run in enumerate(runs):
+                    meta = {k: v for k, v in run["metadata"].items() if v is not None}
+                    store.runs.add(
+                        documents=[run["document"]],
+                        ids=[f"seed_{domain}_{i}"],
+                        metadatas=[meta],
+                    )
+                print(f"startup_seed: seeded {len(runs)} {domain} runs")
+            else:
+                print(f"startup_seed: {domain} store has {store.run_count()} runs, skipping")
+        except Exception as exc:
+            print(f"startup_seed: {domain} seeding failed ({exc}) — continuing without seed")

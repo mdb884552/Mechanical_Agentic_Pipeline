@@ -50,10 +50,13 @@ def _build_user_msg(m, b, result, history, store):
             f"{'OK' if h['feasible'] else 'INFEASIBLE'}"
         )
 
-    rag_hits  = store.query_runs(
-        f"m={m:.2f}mm b={b:.1f}mm bending={result['bending_stress']:.1f}MPa",
-        n_results=3,
-    )
+    try:
+        rag_hits = store.query_runs(
+            f"m={m:.2f}mm b={b:.1f}mm bending={result['bending_stress']:.1f}MPa",
+            n_results=3,
+        )
+    except Exception:
+        rag_hits = []
     rag_block = "\n".join(f"  - {h['document']}" for h in rag_hits) or "  (none)"
 
     feasible_hist = [h for h in history if h["feasible"]]
