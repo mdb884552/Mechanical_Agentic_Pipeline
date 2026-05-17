@@ -474,7 +474,7 @@ def main():
         plot_results(llm_results, embed_results, "benchmark_results.png")
         Path("artifacts/benchmark").mkdir(parents=True, exist_ok=True)
         shutil.copy("benchmark_results.png", "artifacts/benchmark/benchmark_results.png")
-        print("Copied → artifacts/benchmark/benchmark_results.png")
+        print("Copied -> artifacts/benchmark/benchmark_results.png")
 
     # cleanup temp ChromaDB directories
     for p in ["./chroma_bench_mini", "./chroma_bench_bge"]:

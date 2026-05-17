@@ -1,6 +1,6 @@
-# Aero-Opt — Agentic AI Pipeline for Structural Design Optimization
+# Mechanical Agentic Pipeline — AI-Driven Structural Design Optimization
 
-> A physics-validated, multi-domain optimization pipeline where a LangGraph AI agent replaces manual iterative engineering design. Built in open-source Python. Aerospace is the testbed — the architecture transfers directly to any AI automation role.
+> A physics-validated, multi-domain optimization pipeline where a LangGraph AI agent replaces manual iterative engineering design. Built in open-source Python. Mechanical/aerospace is the testbed — the architecture transfers directly to any AI automation role.
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.2-purple.svg)](https://github.com/langchain-ai/langgraph)
@@ -26,7 +26,7 @@ LangGraph AI agent (RAG + LLM)     ← 0.1% from scipy in 7 iterations
 3D-printed physical part           ← simulation-to-reality validation
 ```
 
-The aerospace domain provides a rigorous testbed. The same architecture — tool-calling agent, RAG over structured history, LangGraph orchestration, cloud or local LLM — applies directly to business process automation, ERP optimization, and any domain where an AI needs to call external processes and improve decisions over time.
+The mechanical/aerospace domain provides a rigorous testbed. The same architecture — tool-calling agent, RAG over structured history, LangGraph orchestration, cloud or local LLM — applies directly to business process automation, ERP optimization, and any domain where an AI needs to call external processes and improve decisions over time.
 
 ---
 
@@ -96,14 +96,14 @@ scipy SLSQP finds the minimum-mass cantilever beam subject to deflection and str
 
 ### Phase 3.5 — Local RAG Memory
 
-ChromaDB vector database with ONNX all-MiniLM-L6-v2 embeddings — runs fully locally, no API key. Every simulation run and engineering lesson is semantically retrievable.
+ChromaDB vector database with **BAAI/bge-large-en-v1.5** embeddings — runs fully locally, no API key. Every simulation run and engineering lesson is semantically retrievable.
 
 ```python
 hits = store.query_runs("infeasible deflection near 8mm height")
 # Returns most similar past runs with full metadata
 ```
 
-**26 simulation runs + 6 engineering lessons** indexed and queryable before the agent runs.
+**Embedding model selected via benchmark** — BGE-large-en-v1.5 outperformed all-MiniLM-L6-v2 by **47.9% lower cosine distance** on domain-specific retrieval queries (67 ms per query on RTX 4070).
 
 ### Phase 4 — LangGraph AI Agent
 
@@ -119,11 +119,27 @@ The agent starts from an infeasible design and works toward the constraint bound
 
 **Dual LLM deployment:**
 ```bash
-python agent.py                          # Claude API (cloud)
-python agent.py --local --model llama3.2 # Ollama (on-premise, no data leaves machine)
+python agent.py                            # Claude API (cloud)
+python agent.py --local                    # Ollama llama3.1:8b (on-premise)
+python agent.py --local --model qwen2.5:7b # alternate local model
 ```
 
 ![Agent run](artifacts/phase4/langgraph_diagram.png)
+
+### Local LLM Benchmark — Llama3.1:8b vs Qwen2.5:7b
+
+Benchmarked on NVIDIA RTX 4070 Laptop GPU (8 GB VRAM). 3 trials per model, beam optimization task.
+
+| Metric | Llama3.1:8b | Qwen2.5:7b |
+|---|---|---|
+| Avg iterations to converge | **4.3 ± 1.9** | 15.0 ± 0.0 |
+| JSON parse failures | **0** | **0** |
+| Seconds per iteration | 4.4s | **3.9s** |
+| Final H error vs scipy | **0.000%** | **0.000%** |
+
+*Llama3.1:8b wins on reasoning efficiency — applies 1/H³ physics directly and converges in under 5 iterations. Qwen is marginally faster per call but takes 3.5× more iterations. Both produce zero JSON failures. Default local model is `llama3.1:8b`.*
+
+![Benchmark results](artifacts/benchmark/benchmark_results.png)
 
 ### Multi-Domain Generalization — Spur Gear
 
@@ -155,8 +171,8 @@ The same framework, applied to a completely different engineering domain (no FEA
 | Optimization | scipy SLSQP | Deterministic baseline |
 | Agent orchestration | **LangGraph 1.2** | Structured state graph, full observability |
 | Cloud LLM | **Claude API (Sonnet 4.6)** | Agent reasoning and JSON proposals |
-| Local LLM | **Ollama (llama3.2)** | On-premise, `--local` flag |
-| Agent memory | **ChromaDB + ONNX** | Local RAG, no API key required |
+| Local LLM | **Ollama (llama3.1:8b)** | On-premise, `--local` flag — benchmarked winner |
+| Agent memory | **ChromaDB + BGE-large-en-v1.5** | Local RAG — 47.9% better retrieval than MiniLM |
 | Numerical | NumPy (vectorized einsum) | No Python loops in hot paths |
 | Visualization | Matplotlib (headless Agg) | Saved plot artifacts |
 | Physical validation | FDM printer + calipers | Reality check (Phase 5) |
@@ -166,8 +182,8 @@ The same framework, applied to a completely different engineering domain (no FEA
 ## Quick Start
 
 ```bash
-git clone https://github.com/<your-username>/aero-opt
-cd aero-opt
+git clone https://github.com/mdb884552/Mechanical_Agentic_Pipeline
+cd Mechanical_Agentic_Pipeline
 python -m venv venv && venv\Scripts\activate   # Windows
 pip install -r requirements.txt
 
@@ -175,13 +191,16 @@ pip install -r requirements.txt
 echo ANTHROPIC_API_KEY=sk-ant-... > .env
 
 # Run the full beam optimization pipeline
-python seed_rag.py          # seed RAG with 26 runs + 6 lessons
+python seed_rag.py          # seed RAG with BGE embeddings
 python agent.py             # LangGraph agent (Claude API)
-python agent.py --local     # or: local Ollama (run: ollama serve)
+python agent.py --local     # or: local Ollama llama3.1:8b (run: ollama serve)
 
 # Run the gear optimization demo
 python seed_rag_gear.py
 python agent_gear.py
+
+# Run the LLM + embedding benchmark
+python benchmark.py         # requires ollama pull llama3.1:8b && ollama pull qwen2.5:7b
 
 # Generate all visuals
 python param_sweep.py
@@ -194,14 +213,15 @@ python plot_langgraph.py
 ## Project Structure
 
 ```
-aero-opt/
+Mechanical_Agentic_Pipeline/
 ├── simulate.py          # Phase 2 — parametric beam FEA callable
 ├── param_sweep.py       # Phase 2 — design space visualization
 ├── optimizer.py         # Phase 3 — scipy SLSQP constrained optimization
-├── rag_store.py         # Phase 3.5 — generic ChromaDB RAG store
+├── rag_store.py         # Phase 3.5 — ChromaDB RAG store (BGE-large embeddings)
 ├── seed_rag.py          # Phase 3.5 — seed beam knowledge into RAG
 ├── agent.py             # Phase 4 — LangGraph beam optimization agent
 ├── plot_langgraph.py    # Phase 4 — state graph + results visualization
+├── benchmark.py         # Benchmark — Llama vs Qwen LLM, MiniLM vs BGE embeddings
 ├── simulate_gear.py     # Gear demo — Lewis + Hertz analytical simulator
 ├── optimizer_gear.py    # Gear demo — scipy optimizer + constraint map
 ├── seed_rag_gear.py     # Gear demo — seed gear RAG
@@ -214,7 +234,8 @@ aero-opt/
     ├── phase2/
     ├── phase3/
     ├── phase4/
-    └── gear/
+    ├── gear/
+    └── benchmark/
 ```
 
 ---
@@ -231,6 +252,7 @@ The architecture applies to any domain where an AI agent needs to call external 
 | Constraint checking (stress, deflection) | Business rules, SLA thresholds, compliance checks |
 | `--local` Ollama flag | On-premise for data-sensitive enterprise environments |
 | scipy baseline before agent | A/B validation — AI result vs deterministic ground truth |
+| LLM benchmark (Llama vs Qwen) | Model selection for production deployment |
 | Physical validation (Phase 5) | Pilot rollout, UAT, production monitoring |
 
 ---
@@ -263,4 +285,4 @@ Built by Michael Barfoot, rising ME senior at Texas A&M University, summer 2026.
 
 Portfolio project demonstrating full-stack AI/automation engineering — from physics-based simulation to agentic orchestration to physical hardware validation. Targeting internship roles in Mechanical Engineering and AI/automation.
 
-*The Mechanical domain is the rigorous testbed. The architecture is the transferable skill.*
+*The mechanical domain is the rigorous testbed. The architecture is the transferable skill.*

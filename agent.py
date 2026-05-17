@@ -26,9 +26,9 @@ Usage
     python agent.py --model claude-opus-4-7
 
   Local Ollama (no API key required):
-    ollama pull llama3.2
+    ollama pull llama3.1:8b
     python agent.py --local
-    python agent.py --local --model qwen2.5
+    python agent.py --local --model qwen2.5:7b
 
 Setup
 -----
@@ -59,7 +59,7 @@ _parser.add_argument("--model", default=None,
                      help="Override model name (default: claude-sonnet-4-6 or llama3.2)")
 ARGS     = _parser.parse_args()
 USE_LOCAL = ARGS.local
-MODEL     = ARGS.model or ("llama3.2" if USE_LOCAL else "claude-sonnet-4-6")
+MODEL     = ARGS.model or ("llama3.1:8b" if USE_LOCAL else "claude-sonnet-4-6")
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 L           = 0.100
