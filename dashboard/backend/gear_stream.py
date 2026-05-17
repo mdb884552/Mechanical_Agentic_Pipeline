@@ -10,7 +10,7 @@ from rag_store import SimulationStore
 
 M_MIN, M_MAX = 1.5, 6.0
 B_MIN, B_MAX = 10.0, 80.0
-MAX_ITER     = 12
+MAX_ITER     = 8
 CONV_TOL     = 0.008
 
 SYSTEM_PROMPT = f"""You are a mechanical gear design assistant inside an automated optimization loop.
@@ -133,7 +133,8 @@ def run_gear_optimization(params: dict, api_key: str):
             raw      = client.messages.create(
                 model="claude-sonnet-4-6",
                 max_tokens=512,
-                system=SYSTEM_PROMPT,
+                system=[{"type": "text", "text": SYSTEM_PROMPT,
+                          "cache_control": {"type": "ephemeral"}}],
                 messages=[{"role": "user", "content": _build_user_msg(m, b, result, history, store)}],
             ).content[0].text.strip()
             proposal  = json.loads(raw)

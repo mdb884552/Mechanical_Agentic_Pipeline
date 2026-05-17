@@ -11,7 +11,7 @@ from rag_store import SimulationStore
 DELTA_MAX  = 0.050e-3
 STRESS_MAX = 0.6 * _YIELD_PA
 H_MIN, H_MAX = 0.003, 0.030
-MAX_ITER   = 10
+MAX_ITER   = 8
 CONV_TOL   = 0.005
 
 SYSTEM_PROMPT = f"""You are an aerospace structural optimization assistant inside an automated design loop.
@@ -97,7 +97,7 @@ def run_beam_optimization(params: dict, api_key: str):
     yield {"type": "start", "L_mm": round(L*1e3, 1), "load_N": P, "H_init_mm": round(H*1e3, 2)}
 
     for iteration in range(MAX_ITER):
-        result   = simulate({"L": L, "H": H, "load": P})
+        result   = simulate({"L": L, "H": H, "load": P, "ny": 6})
         feasible = _feasible(result)
 
         store.log_run({"L": L, "H": H, "load": P}, result, f"dashboard iter {iteration+1}")
@@ -130,7 +130,8 @@ def run_beam_optimization(params: dict, api_key: str):
             raw      = client.messages.create(
                 model="claude-sonnet-4-6",
                 max_tokens=512,
-                system=SYSTEM_PROMPT,
+                system=[{"type": "text", "text": SYSTEM_PROMPT,
+                          "cache_control": {"type": "ephemeral"}}],
                 messages=[{"role": "user", "content": _build_user_msg(H, result, history, store)}],
             ).content[0].text.strip()
             proposal  = json.loads(raw)
